@@ -1,5 +1,6 @@
 //Tipos de variações 
 //Nome: Corrida
+// 17082022
 
 let Atletas = ["Novos", "Velhos"]
 if (Atletas.length <= 3)
