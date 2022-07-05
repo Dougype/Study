@@ -96,5 +96,16 @@ while (dodo < doug)
     dodo++
 }
     
+//Contagem de uma lista ou imprimir. 
 
+//EXEMPLO(1)
+let alunos = ["douglas", "bia", "jose"]
+    console.log(alunos[0])   //1 ALUNO POR VEZ.
+
+//EXEMPLO (2)
+let alunos = ["douglas", "bia","jose"]
+  
+for(let nome of alunos){
+    console.log(nome)   //TODOS ALUNOS DA LISTA POR VEZ.
+}
 
