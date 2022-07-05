@@ -55,7 +55,7 @@ switch(habbo)
 
 
 
-// Laço contado
+// Laço contado  "POSSUI: INDICE + CONDIÇÃO + INCREMENTO.
 let habbo = 10
 
 for(usuarios=1; usuarios <= 10; usuarios++)
@@ -75,6 +75,26 @@ for(usuarios=1; usuarios <= 10; usuarios++)
     }
 }
 
-// Laço de controle
+// Laço de controle  --> "POSSUI: INDICE + CONDIÇÃO + INCREMENTO.
+
+
+let doug = 10
+dodo=1
+
+while (dodo < doug) 
+{
+   
+    if (dodo == 2 ){
+        console.log("O número é igual a 0")
+    }
+    else if (dodo %2 == 0){
+        console.log(" o número é par")
+    }
+    else{
+        console.log("o nemero é impar")  
+    }
+    dodo++
+}
+    
 
 
