@@ -1,0 +1,110 @@
+# Study
+Estudos aplicados.
+
+
+//Classe. -----------------------------------------------------------------
+
+//Classe mae:
+
+public class Conta
+{
+public double saldo {get; private set;}           <-- Atributo)
+}
+
+//Herana: -----------------------------------------------------------------
+
+public class ContaPopanca : Conta    
+{
+
+ public double limite {get;set;}                  <-- Atributo)
+
+}
+
+
+//PARA UTILZIAR O ATRIBUTO DA CLASSE MÃE, E PRECISO INSTANCIAR AS CLASSES.
+
+using Projeto;   <--- Pasta que será utilizada)
+
+ContaCorrente obj_cc = new ContaCorrente();    <---- Novo Objeto)
+obj_cc.saldo = 5000; 
+
+Console.WriteLine(" Novo Saldo " + objcc.saldo);       <---- Impressao);
+
+// Polimofismo  -----------------------------------------------------------------
+
+//! Atribuir todos os atributos da classe mãe para as filhas.
+
+Ex: 
+public class Conta
+{
+public double saldo {get; private set;}           <-- Atributo)
+
+public string ?agencia {get;set;}
+
+public double ?Conta {get; private set;}
+
+public string imprimir(){                          <--- Imprimir) 
+            string texto = "Conta: " + this.conta +
+                           "\nAgencia: " + this.agencia +
+                           "\nSaldo: " + this.saldo;
+            return texto; 
+
+}
+
+( CLASSE MAIN )
+
+Console.WriteLine(obj_cc.imprimir());
+
+
+--> Se a Classes filhas possuirem Atributos e deseja imprimir (BASE)
+
+Ex: 
+public class ContaCorrente : Conta
+{
+        public double limite {get;set;}
+
+
+
+        public string imprimir(){
+            string texto = base.imprimir();
+            texto = texto + "\nLimite: " + this.limite;
+            return texto;
+        }
+        
+        
+        // Encapsulamento  -----------------------------------------------------------------
+        
+        *Deixar a classe private e atribuir modificacoes a ela por meio de novos metodos.
+        
+        Ex: 1
+        
+         public double saldo {get; private set;}   <--- Atributo Private)
+
+public void Depositar (double valorDepositado)   <--- Novo Metodo)
+        {
+            this.saldo = this.saldo + valorDepositado;
+        }
+
+Na classe main: 
+Usanda: 
+obj_cc.Depositar(8000); <---- Valor Depositado)
+
+Ex: 2 
+
+
+public void Sacar(double valorAtribuido)
+        {
+            if (this.saldo >= valorAtribuido)
+            this.saldo = this.saldo - valorAtribuido;
+
+            else
+            Console.WriteLine("O valor é insuficiente");
+
+        }
+        
+        
+        Na classe main: 
+        Usando:
+        obj_cc.Sacar(9000); <--- Sacado  o valor)
+        
+
